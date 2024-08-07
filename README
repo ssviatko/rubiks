@@ -1,0 +1,66 @@
+Solve 1 Rubik's cube..
+or solve 1 million of them.
+
+It doesn't matter.
+
+Just remember to set the #define for LOGGING to false if you intend to
+solve 1 million cubes.
+
+This program was written specially for a group of young adults who
+were taking my class in the summer of 2009, Parallel Programming &
+Supercomputing Applications, which was taught at the Uniersity of
+Advancing Technology, a boutique trade school in Tempe, AZ.
+
+The program is based on the canonical algorithm for solving Rubik's
+cubes, which was originally printed in a pamphlet sold with the cube
+when it came out in 1982. It is based on several short rotation
+sequenced movements, for example, "fUlu", which works as follows:
+
+Looking at a specific face of the cube:
+
+Rotate the front face (inverted)
+Rotate the top face (the one facing up)
+Rotate the left face (inverted)
+Rotate the top face again (inverted, this time).
+
+The difference between a normal rotation and an inverted rotation
+is simply whether you rotate the face clockwise or counter-
+clockwise relative to your viewing position.
+
+There were about 5-10 movement sequences that were intended to
+be applied in order, checking along the way to see if specific
+colors had aligned to their home positions, and reacting with
+additional movement sequences if necessary. If you are curious
+how to do this with your own cube at home, there are many, many
+Youtube videos out there that will walk you through the
+solution algorithm step by step.
+
+Anyway, this program was presented to the students as one of many
+options upon which to base a final project. The final project 
+involved taking a piece of code that could blatantly be parallelized
+using any number of methods (pipelining, binary tree, divide
+and conquer, etc.) and implementing a parallel solution based
+on the original code. The students had a choice between this
+code (the Rubiks solver), a Conway's game of life implementation
+called "Rabbit Island" (where virtual foxes eat virtual rabbits,
+which in turn eat virtual vegetation, and the goal is to keep
+the simulation running without a particular resource being
+depleted), an N-Queens implementation, a fractal generator,
+and possibly a couple more programs that I forgot about since
+it's been 15 years since I taught this class.
+
+I really wished the students would have picked this one. I
+put a lot of heart into this code when I wrote it on my time
+off. Unfortunately there were no takers.. they all thought it
+was too complicated for a school project. Maybe they were right.
+
+Nonetheless, the algorithm divides up into 5 neat little steps.
+It would be trivial for an experienced developer to cordon off
+the 5 steps and pass partially completed cubes from step to step
+in a pipeline fashion. If I am bored someday I might actually do
+this myself as a demonstration.
+
+Enjoy and have fun playing with this code!
+
+- Steve
+
